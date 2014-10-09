@@ -28,8 +28,8 @@
       <file leaf-file-name="mm-nested-attrs.gemspec" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mm-nested-attrs.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17259414" vertical-offset="0" max-vertical-offset="956">
-              <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.04707113" vertical-offset="0" max-vertical-offset="956">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -301,8 +301,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mm-nested-attrs.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17259414" vertical-offset="0" max-vertical-offset="956">
-          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.04707113" vertical-offset="0" max-vertical-offset="956">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding />
         </state>
       </provider>
