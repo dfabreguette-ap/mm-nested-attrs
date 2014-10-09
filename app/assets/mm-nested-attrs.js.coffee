@@ -1,14 +1,19 @@
 @load_remove_sub_form_buttons = ->
-  jQuery(".sub-form-remove").click ->
-    nested_fields_container = jQuery(this).parent()
-    nested_fields_attr_wrapper = jQuery(nested_fields_container).attr("data-name-attr-wrapper")
-    if nested_fields_attr_wrapper
-      if !jQuery(nested_fields_container).hasClass("new-subform-nested-fields")
-        destroy_attr_name = nested_fields_attr_wrapper + "[_destroy]"
-        jQuery(nested_fields_container).append('<input type="hidden" name="'+ destroy_attr_name + '" value = "1"/>')
-        jQuery(nested_fields_container).hide()
-      else
-        jQuery(nested_fields_container).remove()
+  jQuery(".sub-form-remove").each ->
+    jQuery(this).click ->
+      nested_fields_container = jQuery(this).parent()
+      nested_fields_attr_wrapper = jQuery(nested_fields_container).attr("data-name-attr-wrapper")
+      if nested_fields_attr_wrapper
+        if !jQuery(nested_fields_container).hasClass("new-subform-nested-fields")
+          destroy_attr_name = nested_fields_attr_wrapper + "[_destroy]"
+          jQuery(nested_fields_container).append('<input type="hidden" name="'+ destroy_attr_name + '" value = "1"/>')
+          jQuery(nested_fields_container).hide()
+        else
+          jQuery(nested_fields_container).remove()
+
+  nested_fields_container = jQuery(".sub-form-remove").first().parent()
+  nested_fields_containers_container = jQuery(nested_fields_container).parent()
+  jQuery(nested_fields_containers_container).find('.nested-fields').first().find('.sub-form-remove').remove()
 
 
 

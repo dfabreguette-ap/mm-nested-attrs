@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = 'dfabreguette@gmail.com'
   s.require_path= "lib"
   s.extra_rdoc_files = ["README.md"]
-  s.files= FileList['lib/mm-nested-attrs.rb','app/assets/*']
+  s.files= ['lib/mm-nested-attrs.rb','app/assets/*']
   s.required_ruby_version = '>= 1.9.3'
   s.homepage    =
     'https://github.com/dfabreguette-ap/mm-nested-attrs'
