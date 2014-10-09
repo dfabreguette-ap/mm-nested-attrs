@@ -42,7 +42,7 @@ module MongoMapper
             attributes_collection.each do |attributes|
               attributes.stringify_keys!
 
-              if attributes['id'].blank? or (attributes['id'].present? and !class_name.constantize.send(:where, {:id => attributes['id']}).first)
+              if !self.has_destroy_flag?(attributes) and (attributes['id'].blank? or (attributes['id'].present? and !class_name.constantize.send(:where, {:id => attributes['id']}).first))
                 send(association_name) << class_name.constantize.new(attributes)
               elsif existing_record = send(association_name).detect { |record| record.id.to_s == attributes['id'].to_s }
                 if self.has_destroy_flag?(attributes) and allow_destroy
