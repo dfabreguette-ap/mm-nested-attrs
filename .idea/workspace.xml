@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d766a8da-6c3b-4b78-b089-b5c89b177bf0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mm-nested-attrs.gemspec" afterPath="$PROJECT_DIR$/mm-nested-attrs.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/mm-nested-attrs.js.coffee" afterPath="$PROJECT_DIR$/app/assets/mm-nested-attrs.js.coffee" />
     </list>
     <ignored path="mm-nested-attrs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/mm-nested-attrs.gemspec">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.17259414" vertical-offset="0" max-vertical-offset="956">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -294,7 +293,7 @@
     <entry file="file://$PROJECT_DIR$/mm-nested-attrs.gemspec">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17259414" vertical-offset="0" max-vertical-offset="956">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
           <folding />
         </state>
       </provider>
