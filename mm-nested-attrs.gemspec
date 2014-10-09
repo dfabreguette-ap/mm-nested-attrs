@@ -1,4 +1,5 @@
 #encoding: utf-8
+
 Gem::Specification.new do |s|
   s.name        = 'mm-nested-attrs'
   s.version     = '0.0.2'
@@ -9,7 +10,11 @@ Gem::Specification.new do |s|
   s.email       = 'dfabreguette@gmail.com'
   s.require_path= "lib"
   s.extra_rdoc_files = ["README.md"]
-  s.files= Dir["lib/**/*"]  + ['app/assets/javascripts/mm-nested-attrs.js']
+  s.files= [
+    'app/assets/javascripts/nested-attrs.js',
+    'lib/mm-nested-attrs-engine.rb',
+    'lib/mm-nested-attrs.rb'
+  ]
   s.required_ruby_version = '>= 1.9.3'
   s.homepage    =
     'https://github.com/dfabreguette-ap/mm-nested-attrs'

@@ -52,6 +52,7 @@ module MongoMapper
                   existing_record.destroy unless class_name.constantize.embeddable?
                 else
                   existing_record.attributes = attributes.except(*UNASSIGNABLE_KEYS)
+                  existing_record.save
                 end
               end
             end

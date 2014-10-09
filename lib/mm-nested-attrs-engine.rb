@@ -1,9 +1,7 @@
-require "mm-nested-attrs/version"
+require "nested-attrs/version"
 
-module MmNestedAttrs
-  module Rails
-    class Engine < ::Rails::Engine
+module NestedAttrs
+  class Engine < ::Rails::Engine
 
-    end
   end
 end
