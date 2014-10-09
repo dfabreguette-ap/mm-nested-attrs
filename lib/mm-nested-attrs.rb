@@ -17,6 +17,10 @@ module MongoMapper
                 end
                 }, __FILE__, __LINE__
             end
+
+            module_eval %{
+
+                        }, __FILE__, __LINE__
           end
         end
 
@@ -24,7 +28,8 @@ module MongoMapper
           UNASSIGNABLE_KEYS = %w{ id _id _destroy }
 
           def assign_nested_attributes_for_association(association_name, attributes_collection, allow_destroy)
-            class_name = self.associations[association_name].options[:class_name] || class_name
+
+            class_name = self.associations[association_name].class_name || class_name
 
             unless attributes_collection.is_a?(Hash) || attributes_collection.is_a?(Array)
               raise ArgumentError, "Hash or Array expected, got #{attributes_collection.class.name} (#{attributes_collection.inspect})"
@@ -37,11 +42,16 @@ module MongoMapper
             attributes_collection.each do |attributes|
               attributes.stringify_keys!
 
-              if attributes['_id'].blank?
+              if attributes['id'].blank? or (attributes['id'].present? and !class_name.constantize.send(:where, {:id => attributes['id']}).first)
                 send(association_name) << class_name.constantize.new(attributes)
-              elsif existing_record = send(association_name).detect { |record| record.id.to_s == attributes['_id'].to_s }
-                if existing_record.has_destroy_flag?(attributes) && allow_destroy
-                  send(association_name).delete(existing_record)
+              elsif existing_record = send(association_name).detect { |record| record.id.to_s == attributes['id'].to_s }
+                if self.has_destroy_flag?(attributes) and allow_destroy
+
+                  # Remove record from fields array
+                  existing_record_index = send(association_name).index(existing_record)
+                  send(association_name).delete_at(existing_record_index)
+
+                  # Then remove record from DB
                   existing_record.destroy unless class_name.constantize.embeddable?
                 else
                   existing_record.attributes = attributes.except(*UNASSIGNABLE_KEYS)
