@@ -18,9 +18,6 @@ module MongoMapper
                 }, __FILE__, __LINE__
             end
 
-            module_eval %{
-
-                        }, __FILE__, __LINE__
           end
         end
 
