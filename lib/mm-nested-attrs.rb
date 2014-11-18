@@ -52,7 +52,7 @@ module MongoMapper
                 # Then remove record from DB
                 existing_record.destroy unless class_name.constantize.embeddable?
               else
-                existing_record.attributes = attributes.except(*InstanceMethods::UNASSIGNABLE_KEYS)
+                existing_record.attributes = attributes.except(MongoMapper::Plugins::Associations::NestedAttributes::UNASSIGNABLE_KEYS)
                 existing_record.save
               end
             end
